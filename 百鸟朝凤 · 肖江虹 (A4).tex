@@ -1,0 +1,139 @@
+\documentclass[twoside,openright,headings=optiontohead]{scrbook}
+\renewcommand{\baselinestretch}{1.3}  %行間距倍率
+\columnsep 7mm
+%\renewcommand\thepage{}
+
+
+\usepackage[
+a4paper=true,
+%CJKbookmarks,
+unicode=true,
+bookmarksnumbered,
+bookmarksopen,
+hyperfigures=true,
+hyperindex=true,
+pdfpagelayout = SinglePage,
+%pdfpagelayout = TwoPageRight,
+pdfpagelabels = true,
+pdfstartview = FitV,
+colorlinks,
+pdfborder=001,
+linkcolor=black,
+anchorcolor=black,
+citecolor=black,
+pdftitle={百鸟朝凤},
+pdfauthor={肖江虹},
+pdfsubject={百鸟朝凤},
+pdfkeywords={小说《百鸟朝凤》聚焦贵州修文县农村一支民间唢呐乐班的际遇，描写了两代唢呐艺人以及唢呐这种民间艺术形式在现代化的挤压下正逐渐消亡的过程。},
+pdfcreator={https://m-mono.github.io}
+]{hyperref}
+
+
+\usepackage{geometry}
+\geometry{left=3cm,right=3cm,top=4cm,bottom=3cm,foot=4cm}
+\usepackage{graphics,graphicx,pdfpages}
+
+%自动加注拼音
+\usepackage{xpinyin}
+\xpinyinsetup{format={\color{PinYinColor}}}
+%手动加注外语及日语振假名
+\usepackage{ruby}
+\renewcommand\rubysize{0.4} %匹配 xpinyin 默认标注字体大小
+\renewcommand\rubysep{-0.5em} %匹配 xpinyin 默认标注高度
+
+\usepackage{xeCJK}
+\usepackage{indentfirst}
+\setlength{\parindent}{2.0em}
+
+%正文字体
+\setCJKmainfont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+\setCJKsansfont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+\setCJKmonofont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+\setmainfont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+\setsansfont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+\setmonofont[Path=Fonts/]{WenYue-GuDianMingChaoTi-NC-W5.otf}
+%拼音字体
+\newfontfamily{\Pinyin}[Path=Fonts/]{SourceSansPro-Regular.otf}
+
+
+
+% 頁面及文字顏色
+\usepackage{xcolor}
+\definecolor{TEXTColor}{RGB}{50,50,50} % TEXT Color
+\definecolor{PinYinColor}{RGB}{130,130,130} % TEXT Color
+\definecolor{NOTEXTColor}{RGB}{0,0,0} % No TEXT Color
+\definecolor{BGColor}{RGB}{240,240,240} % BG Color
+
+
+\usepackage{multicol}
+
+\makeindex
+\renewcommand{\contentsname}{{百鸟朝凤}}
+\usepackage{fancyhdr} % 設置頁眉頁腳
+\pagestyle{fancy}
+%\fancyhf{} % 清空當前設置
+\renewcommand{\headrulewidth}{0pt}  %頁眉線寬，設為0可以去頁眉線
+\renewcommand{\footrulewidth}{0pt}  %頁眉線寬，設為0可以去頁眉線
+
+\usepackage{titletoc}
+\dottedcontents{section}[100em]{\bfseries}{100em}{100em} % 去掉目录虚线
+
+
+\begin{document}
+	\frontmatter
+	\begin{figure}[ht]
+		\begin{center}
+			\includepdf[height=\paperheight]{Frontmatter.jpeg}
+		\end{center}
+	\end{figure}
+	\newpage
+	{\Huge 索引}\\
+	
+\begin{quote}
+	【词目】 百鸟朝凤\\
+
+	【发音】 {\Pinyin{bǎi niǎo cháo fèng}}\\
+	
+	【释义】 朝：朝见；凤：凤凰，古代传说中的鸟王。旧时喻指君主圣明而天下依附，后也比喻德高望重者众望所归。\\
+	
+	【出处】 宋·李昉等《太平御览》九百一十五卷引《唐书》：“海州言凤见于城上，群鸟数百随之，东北飞向苍梧山。”\\
+\end{quote}
+	\newpage
+	{\color{TEXTColor}
+		\begin{multicols}{2}
+			\tableofcontents
+		\end{multicols}
+		\newpage
+		\mainmatter
+		\begin{multicols}{2}
+			\include{./Chapters/01}
+			\include{./Chapters/02}
+			\include{./Chapters/03}
+			\include{./Chapters/04}
+			\include{./Chapters/05}
+			\include{./Chapters/06}
+			\include{./Chapters/07}
+			\include{./Chapters/08}
+			\include{./Chapters/09}
+			\include{./Chapters/10}
+			\include{./Chapters/11}
+			\include{./Chapters/12}
+			\include{./Chapters/13}
+			\include{./Chapters/14}
+			\include{./Chapters/15}
+			\include{./Chapters/16}
+			\include{./Chapters/17}
+			\include{./Chapters/18}
+			\include{./Chapters/19}
+			\include{./Chapters/20}
+			\include{./Chapters/21}
+		\end{multicols}
+
+		\backmatter
+		{\color{TEXTColor}
+			\begin{figure}[ht]
+				\begin{center}
+					\includepdf[width=\paperwidth,height=\paperheight]{Backmatter.jpg}
+				\end{center}
+			\end{figure}
+\end{document}
