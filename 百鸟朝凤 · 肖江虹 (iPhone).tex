@@ -1,4 +1,4 @@
-\documentclass[twoside,openright,headings=optiontohead]{scrbook}
+\documentclass[oneside,openright,headings=optiontohead]{scrbook}
 \renewcommand{\baselinestretch}{1.3}  %行間距倍率
 \columnsep 7mm
 %\renewcommand\thepage{}
@@ -29,9 +29,10 @@ pdfcreator={https://m-mono.github.io}
 ]{hyperref}
 
 
-\usepackage{geometry}
-\geometry{left=3cm,right=3cm,top=4cm,bottom=3cm,foot=4cm}
+\usepackage[papersize={75.0mm,133.4mm}]{geometry} % iPhone Plus Format
+\geometry{left=1cm,right=1cm,top=2cm,bottom=1cm,foot=4cm}
 \usepackage{graphics,graphicx,pdfpages}
+
 
 %自动加注拼音
 \usepackage{xpinyin}
@@ -103,12 +104,9 @@ pdfcreator={https://m-mono.github.io}
 \end{quote}
 	\newpage
 	{\color{TEXTColor}
-		\begin{multicols}{2}
-			\tableofcontents
-		\end{multicols}
+		\tableofcontents
 		\newpage
 		\mainmatter
-		\begin{multicols}{2}
 			\include{./Chapters/01}
 			\include{./Chapters/02}
 			\include{./Chapters/03}
@@ -130,8 +128,6 @@ pdfcreator={https://m-mono.github.io}
 			\include{./Chapters/19}
 			\include{./Chapters/20}
 			\include{./Chapters/21}
-		\end{multicols}
-
 		\backmatter
 		{\color{TEXTColor}
 			\begin{figure}[ht]

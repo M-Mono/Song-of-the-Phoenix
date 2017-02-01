@@ -24,7 +24,7 @@
 
 
 + Fonts
-  - [文悦古典明朝体](http://wytype.com/typeface/WenYue-GuDianMingChaoTi/)
+  - [文悦古典明朝体 0.011](http://wytype.com/typeface/WenYue-GuDianMingChaoTi/)
   - [Source Sans Pro 2.020](https://github.com/adobe-fonts/source-sans-pro)
 
 
